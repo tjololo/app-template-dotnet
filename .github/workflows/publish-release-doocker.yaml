@@ -38,6 +38,6 @@ jobs:
         with:
           push: true
           context: /tmp/release/
-          tags: ghcr.io/${{ github.repository }}/app-light:v${{ github.event.release.tag_name }}
+          tags: ghcr.io/${{ github.repository }}/app-light:${{ github.event.release.tag_name }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
